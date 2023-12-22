@@ -13,5 +13,5 @@ public class Categoria {
     private Integer idcategoria;
 
     @Column(name = "nombre")
-    private String nomcate;
+    private String nombre;
 }
