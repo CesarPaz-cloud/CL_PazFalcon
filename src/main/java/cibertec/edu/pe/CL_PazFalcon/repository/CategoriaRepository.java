@@ -14,12 +14,12 @@ public interface CategoriaRepository extends JpaRepository<Categoria, Integer> {
 
     Optional<Categoria> findByNombre(String nombre);
 
-    List<Categoria> findByCategorynameContainingIgnoreCase(String filtro);
+    List<Categoria> findByNombreContainingIgnoreCase(String filtro);
 
-    @Query("SELECT c FROM Category c WHERE c.categoryname LIKE %:filtro%")
+    @Query("SELECT c FROM Categoria c WHERE c.nombre LIKE %:filtro%")
     List<Categoria> filtrarCategoriasPorNombre(@Param("filtro") String filtro);
 
-    @Query(value = "SELECT * FROM categories WHERE categoryname LIKE %:filtro%",
+    @Query(value = "SELECT * FROM categoria WHERE nombre LIKE %:filtro%",
             nativeQuery = true)
     List<Categoria> filtrarCategoriasPorNombreSQL(@Param("filtro") String filtro);
 

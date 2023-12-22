@@ -7,10 +7,12 @@ import lombok.NoArgsConstructor;
 
 import java.util.Date;
 
+
 @Data
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
+@Table(name = "docente")
 public class Docente {
 
     @Id
@@ -24,8 +26,8 @@ public class Docente {
     @Column(name = "dni")
     private String dni;
 
-    @Column(name = "fechNacimiento")
-    private Date fechaNacimiento;
+    @Column(name = "fechnacimiento")
+    private Date fechnacimiento;
 
     @Column(name = "sueldo")
     private Double sueldo;

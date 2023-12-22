@@ -6,6 +6,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @AllArgsConstructor
@@ -16,11 +17,12 @@ public class DocenteService {
         return docenteRepository.save(docente);
     }
 
-    public Docente findById(Integer id) {
-        return docenteRepository.findById(id).orElse(null);
+    public Optional<Docente> findById(Integer id){
+        Optional<Docente> docente = docenteRepository.findById(id);
+        return (docente.isEmpty()) ? Optional.empty() : docente;
     }
 
-    public List<Docente> findAll() {
+    public List<Docente> listaDocente() {
         return docenteRepository.findAll();
     }
 

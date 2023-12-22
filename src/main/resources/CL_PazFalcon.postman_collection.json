@@ -1,0 +1,111 @@
+{
+	"info": {
+		"_postman_id": "22516d1b-5a35-48cf-be9d-d107920e2ad2",
+		"name": "CL_PazFalcon",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30168976"
+	},
+	"item": [
+		{
+			"name": "Docente",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/docente/lista",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"docente",
+						"lista"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DelateDocente",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/docente/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"docente",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NewDocente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Juan Pérez\",\r\n    \"dni\": \"12345678\",\r\n    \"fechnacimiento\": \"2000-01-01\",\r\n    \"sueldo\": 10000,\r\n    \"email\": \"juan.perez@email.com\",\r\n    \"sexo\": \"Masculino\",\r\n    \"idcategoria\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/docente",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"docente"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateDocente",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Cesar Paz\",\r\n    \"dni\": \"72505895\",\r\n    \"fechnacimiento\": \"2000-01-01\",\r\n    \"sueldo\": 10000,\r\n    \"email\": \"cesar@email.com\",\r\n    \"sexo\": \"Masculino\",\r\n    \"idcategoria\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/docente/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"docente",
+						"5"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
